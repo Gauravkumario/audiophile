@@ -8,17 +8,17 @@ import { useParams } from "next/navigation";
 export default function Featured({ relatedProduct }) {
   const { slug } = useParams();
   return (
-    <div className="m-auto mb-48 max-w-screen-lg">
+    <div className="m-auto mb-48 max-w-screen-lg px-4">
       <div>
-        <h2 className="my-12 text-center text-4xl font-semibold">
+        <h2 className="my-12 text-center text-2xl font-semibold md:text-4xl">
           YOU MAY ALSO LIKE
         </h2>
       </div>
-      <div className="flex gap-8">
+      <div className="flex flex-col gap-8 md:flex-row">
         {relatedProduct.map((rpData) => (
           <div
             key={rpData.name}
-            className="flex w-2/6 flex-col items-center justify-between"
+            className="flex w-full flex-col items-center justify-between md:w-2/6"
           >
             <Image
               src={share}

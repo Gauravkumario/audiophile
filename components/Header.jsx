@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/logo.svg";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { GiHamburgerMenu } from "react-icons/gi";
 import MiniCart from "./MiniCart";
 import { useState, useEffect, useRef } from "react";
 import { useParams, usePathname } from "next/navigation";
@@ -32,13 +33,18 @@ export default function Header() {
 
   return (
     <header>
-      <nav className="m-auto flex max-w-screen-lg items-center justify-between border-b-2 border-gray-700 bg-black py-8 text-sm font-medium text-white">
-        <div className="">
+      <nav className="m-auto flex max-w-screen-lg items-center justify-between border-b-2 border-gray-700 bg-black px-4 py-8 text-sm font-medium text-white">
+        <GiHamburgerMenu
+          size={20}
+          onClick={handleMiniCart}
+          className="block md:hidden"
+        />
+        <div>
           <Link href={"/"}>
             <Image src={Logo} alt="website-logo" priority={true} />
           </Link>
         </div>
-        <div>
+        <div className="hidden md:flex">
           <ul className="flex gap-10">
             <li>
               <Link
@@ -86,7 +92,7 @@ export default function Header() {
                 className="fixed inset-0 z-10 bg-black opacity-50"
                 onClick={handleMiniCart} // Close the MiniCart when clicking on the overlay
               ></div>
-              <div className="absolute right-0 top-[76px] z-20 min-w-[320px]">
+              <div className="absolute right-0 top-[76px] z-20 w-[280px] sm:min-w-[320px]">
                 <MiniCart />
               </div>
             </>

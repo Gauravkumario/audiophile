@@ -57,7 +57,7 @@ export default function Productpage() {
   };
 
   return (
-    <section className="mx-auto my-12 max-w-screen-lg">
+    <section className="mx-auto my-12 max-w-screen-lg px-4">
       <div>
         <div>
           <span>
@@ -72,15 +72,15 @@ export default function Productpage() {
         </div>
         <div>
           <div key={productData.id} className="my-12">
-            <div className="flex gap-8">
-              <div className="w-3/6">
+            <div className="block gap-8 md:flex">
+              <div className="w-full md:w-3/6">
                 <Image
                   src={proimg}
                   alt={productData.name}
                   className="w-54 h-full rounded-xl"
                 />
               </div>
-              <div className="w-3/6 p-10 pb-10">
+              <div className="w-full pb-10 md:w-3/6 md:p-10">
                 <div>
                   {productData.new && (
                     <span className="text-sm font-normal tracking-[12px] text-[#D87D4A]">
@@ -109,10 +109,10 @@ export default function Productpage() {
                 </div>
               </div>
             </div>
-            <div className="my-16 flex">
-              <div className="w-[80%] pr-16">
+            <div className="mt-0 block md:my-16 md:flex">
+              <div className="w-full p-0 md:w-[80%] md:pr-16">
                 <div>
-                  <span className="mb-10 mt-6 text-4xl font-medium">
+                  <span className="mb-10 mt-2 text-4xl font-medium md:mt-6">
                     FEATURES
                   </span>
                 </div>
@@ -120,7 +120,7 @@ export default function Productpage() {
                   {productData.features}
                 </p>
               </div>
-              <div className="w-[20%]">
+              <div className="w-full md:w-[20%]">
                 <div>
                   <span className="mb-10 mt-6 text-4xl font-medium">
                     IN THE BOX
@@ -138,8 +138,8 @@ export default function Productpage() {
                 </div>
               </div>
             </div>
-            <div className="my-16">
-              <div className="grid h-[500px] grid-cols-2 grid-rows-2 gap-4">
+            <div className="my-16 px-0">
+              <div className="flex h-fit flex-col gap-y-3 md:grid md:h-[500px] md:grid-cols-2 md:grid-rows-2 md:gap-4">
                 <div className="col-span-1 row-span-1 overflow-hidden rounded-md">
                   <Image src={set1} alt="set11" className="h-full w-full" />
                 </div>

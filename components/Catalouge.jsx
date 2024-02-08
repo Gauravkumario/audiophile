@@ -8,8 +8,8 @@ import Earphone from "../public/assets/image-category-thumbnail-earphones.png";
 
 export default function Catalouge() {
   return (
-    <div className="m-auto mb-16 mt-32 flex max-w-screen-lg items-center justify-between">
-      <div className="flex h-48 w-[30%] flex-col items-center justify-around rounded-xl bg-[#f1f1f1] pb-4">
+    <div className="m-auto mb-16 mt-32 flex max-w-screen-lg flex-col items-center justify-between px-4 sm:flex-row">
+      <div className="flex h-48 w-full flex-col items-center justify-around rounded-xl bg-[#f1f1f1] pb-4 md:w-[30%]">
         <Image src={Headphone} alt="product-logo" className="-mt-20 w-52" />
         <h2 className="-mt-10 font-medium text-black">HEADPHONES</h2>
         <Link
@@ -19,7 +19,7 @@ export default function Catalouge() {
           SHOP <FaChevronRight size={14} color="#d87d4a" />
         </Link>
       </div>
-      <div className="flex h-48 w-[30%] flex-col items-center justify-around rounded-xl bg-[#f1f1f1] pb-4">
+      <div className="my-20 flex h-48 w-full flex-col items-center justify-around rounded-xl bg-[#f1f1f1] pb-4 sm:my-0 md:w-[30%]">
         <Image src={Speakers} alt="product-logo" className="-mt-20 w-52" />
         <h2 className="-mt-10 font-medium text-black">SPEAKERS</h2>
         <Link
@@ -29,7 +29,7 @@ export default function Catalouge() {
           SHOP <FaChevronRight size={14} color="#d87d4a" />
         </Link>
       </div>
-      <div className="flex h-48 w-[30%] flex-col items-center justify-around rounded-xl bg-[#f1f1f1] pb-4">
+      <div className="flex h-48 w-full flex-col items-center justify-around rounded-xl bg-[#f1f1f1] pb-4 md:w-[30%]">
         <Image src={Earphone} alt="product-logo" className="-mt-20 w-52" />
         <h2 className="-mt-10 font-medium text-black">EARPHONES</h2>
         <Link

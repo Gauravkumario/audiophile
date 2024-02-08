@@ -8,12 +8,12 @@ import { BsInstagram } from "react-icons/bs";
 
 export default function Footer() {
   return (
-    <footer className="">
-      <div className="m-auto max-w-screen-lg pb-8 pt-20">
-        <div className="flex items-center justify-between">
+    <footer className="w-full px-4">
+      <div className="m-auto max-w-screen-lg pb-8 pt-10 sm:pt-20">
+        <div className="flex flex-col items-center justify-center sm:flex-row sm:justify-between">
           <Image src={Logo} alt="website-logo" priority={true} />
-          <div className="text-sm text-white">
-            <ul className="flex gap-10">
+          <div className="mt-8 text-sm text-white sm:m-0">
+            <ul className="flex flex-col items-center gap-x-10 gap-y-8 sm:flex-row">
               <li>
                 <Link href={"/"}>HOME</Link>
               </li>
@@ -29,9 +29,9 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="flex items-center justify-between pt-10">
-          <div className="w-3/6 text-[#979797]">
-            <p className="pb-20">
+        <div className="block items-center justify-between px-4 pt-10 sm:flex sm:px-0">
+          <div className="mb-4 w-full text-center text-[#979797] sm:mb-0 sm:w-3/6 sm:text-left">
+            <p className="pb-8 sm:pb-20">
               Audiophile is an all in one stop to fulfill your audio needs.
               We&apos;re a small team of music lovers and sound specialists who
               are devoted to helping you get the most out of personal audio.
@@ -39,7 +39,7 @@ export default function Footer() {
             </p>
             <p>Copyright {new Date().getFullYear()}. All Rights Reserved</p>
           </div>
-          <div className="flex w-3/6 items-end justify-end gap-5">
+          <div className="flex w-full items-end justify-center gap-5 sm:w-3/6 sm:justify-end">
             <Link href={"/"}>
               <ImFacebook2 size={24} color="#fff" />
             </Link>
